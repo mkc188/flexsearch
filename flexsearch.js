@@ -804,6 +804,8 @@
 
         FlexSearch.prototype.add = function(id, content, callback, _skip_update, _recall){
 
+            console.log(is_function(this.split));
+
             if(SUPPORT_DOCUMENT && this.doc && is_object(id)){
 
                 return this.handle_docs("add", id, /** @type {Function} */ (content));
@@ -902,7 +904,6 @@
                 }
 
                 const tokenizer = this.tokenize;
-                console.log(is_function(this.split));
 
                 let words = (
 
@@ -1451,6 +1452,7 @@
          */
 
         FlexSearch.prototype.search = function(query, limit, callback, _recall){
+            console.log(is_function(this.split));
 
             if(SUPPORT_DOCUMENT && is_object(limit)){
 
@@ -1746,7 +1748,6 @@
             // convert words into single components
 
             const tokenizer = this.tokenize;
-            console.log(is_function(this.split));
 
             let words = (
 
