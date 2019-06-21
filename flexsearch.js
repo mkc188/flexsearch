@@ -915,7 +915,7 @@
                             //(ngram(/** @type {!string} */(content)))
                         //:
                             /** @type {string} */
-                            (content).split(this.split)
+                            is_function(this.split) ? this.split(content) : (content).split(this.split)
                     )
                 );
 
