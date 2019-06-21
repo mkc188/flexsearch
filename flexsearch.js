@@ -1759,7 +1759,7 @@
                         //(ngram(_query))
                     //:
                         /** @type {string} */
-                        (_query).split(this.split)
+                        is_function(this.split) ? this.split(_query) : (_query).split(this.split)
                 )
             );
 
