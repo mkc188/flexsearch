@@ -803,9 +803,6 @@
          */
 
         FlexSearch.prototype.add = function(id, content, callback, _skip_update, _recall){
-
-            console.log(is_function(this.split));
-
             if(SUPPORT_DOCUMENT && this.doc && is_object(id)){
 
                 return this.handle_docs("add", id, /** @type {Function} */ (content));
@@ -917,7 +914,7 @@
                             //(ngram(/** @type {!string} */(content)))
                         //:
                             /** @type {string} */
-                            is_function(this.split) ? this.split(content) : (content).split(this.split)
+                            (is_function(this.split) ? this.split(content) : (content).split(this.split))
                     )
                 );
 
@@ -1452,8 +1449,6 @@
          */
 
         FlexSearch.prototype.search = function(query, limit, callback, _recall){
-            console.log(is_function(this.split));
-
             if(SUPPORT_DOCUMENT && is_object(limit)){
 
                 if(is_array(limit)){
@@ -1762,7 +1757,7 @@
                         //(ngram(_query))
                     //:
                         /** @type {string} */
-                        is_function(this.split) ? this.split(_query) : (_query).split(this.split)
+                        (is_function(this.split) ? this.split(_query) : (_query).split(this.split))
                 )
             );
 
