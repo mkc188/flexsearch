@@ -902,6 +902,7 @@
                 }
 
                 const tokenizer = this.tokenize;
+                console.log(is_function(this.split));
 
                 let words = (
 
@@ -1745,6 +1746,7 @@
             // convert words into single components
 
             const tokenizer = this.tokenize;
+            console.log(is_function(this.split));
 
             let words = (
 
